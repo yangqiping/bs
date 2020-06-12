@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <style>
+        @media screen and (min-width: 768px) {
+            #btn1 {
+                display: none;
+            }
+            #p3 {
+                display: none;
+            }
+            #jiesong {
+                display: block;
+            }
+            #pcjiesong {
+                display: none;
+            }
+            #more {
+                display: none;
+            }
+            #luxian2 {
+                display: none;
+            }
+            #youshi1 {
+                display: block;
+            }
+            #youshi2 {
+                display: none;
+            }
+            #dibu1 {
+                display: block;
+            }
+            #dibu2 {
+                display: none;
+            }
+            #linian1 {
+                display: block;
+            }
+            #linian2 {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .head {
+                display: none;
+            }
+            #p1,
+            #p2 {
+                display: none;
+            }
+            #jiesong {
+                display: none;
+            }
+            #pcjiesong {
+                display: block;
+            }
+            #more {
+                display: block;
+            }
+            #lie2 {
+                display: none;
+            }
+            #luxian {
+                display: none;
+            }
+            #luxian2 {
+                display: block;
+            }
+            #youshi1 {
+                display: none;
+            }
+            #youshi2 {
+                display: block;
+            }
+            #dibu1 {
+                display: none;
+            }
+            #dibu2 {
+                display: block;
+            }
+            #linian1 {
+                display: none;
+            }
+            #linian2 {
+                display: block;
+            }
+        }
+        
+        .head {
+            height: 30px;
+            background-color: black;
+        }
+        
+        .head p {
+            float: right;
+            margin-right: 15px;
+        }
+        
+        #ul1 {
+            font-size: 22px;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+        
+        #ul1 li a:focus {
+            color: orange;
+            border-bottom: 3px solid orange;
+        }
+        
+        #nav1 {
+            position: relative;
+            top: 0px;
+            height: 85px;
+        }
+        
+        #logo {
+            margin-left: 50px;
+        }
+        
+        #btn1 {
+            position: relative;
+            left: 100px;
+            font-size: 20px;
+            color: white;
+            background-color: orange;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        #cen {
+            width: 100%;
+            background-color: #dddddd;
+            padding-top: 20px;
+        }
+        
+        #pcjiesong {
+            height: 195px;
+            background-color: white;
+            margin-top: 10px;
+        }
+        
+        #luxian2 {
+            margin-left: 10px;
+            width: 220px;
+            font-size: 26px;
+            line-height: 60px;
+        }
+        
+        .tupian {
+            height: 80px;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        
+        .tu1 {
+            height: 70px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0px;
+            top: -70px;
+            padding-top: 10px;
+            color: white;
+        }
+        
+        .tu2 {
+            height: 70px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0px;
+            top: -70px;
+            padding-top: 10px;
+            color: white;
+        }
+        
+        .tu3 {
+            height: 70px;
+            position: relative;
+            ;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0px;
+            top: -70px;
+            padding-top: 10px;
+            color: white;
+        }
+        
+        #more {
+            border: 2px solid #b8b8b8;
+            color: #b8b8b8;
+            background-color: white;
+            width: 225px;
+            height: 55px;
+            font-size: 26px;
+            margin: 30px auto;
+            text-align: center;
+            line-height: 55px;
+            border-radius: 10px;
+            /* display: none; */
+        }
+        
+        #luxian2 {
+            display: none;
+            margin-left: 10px;
+            width: 220px;
+            font-size: 26px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid header">
+        <div class=" head">
+            <p><a href="#" style="color: white;">注册</a></p>
+            <p style="color: white;">|</p>
+            <p><a href="#" style="color: white;">登录</a></p>
+            <p style="color: white;">400-808-8682</p>
+            <p><img src="img/tell.png" alt=""></p>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-top" id="nav1">
+            <div class="navbar-header">
+                <button id="btn1">快速定制</button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="#" class="logo"><img src="img/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="col-1">
+                <ul class="nav navbar-nav" id="ul1">
+                    <li><a href="#shouye">首页</a></li>
+                    <li><a href="#remenluxian">热门路线</a></li>
+                    <li><a href="#">签证推荐</a></li>
+                    <li><a href="#">使命愿景</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="shouye" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img alt="First slide" src="img/banner.jpg" style="width: 100%;">
+                <div class="carousel-caption ">
+                    <h1> 悠游古欧洲 浏览德法瑞意</h1>
+                    <p id="p1">巴黎卢浮宫，塞纳河游船，凡尔赛故宫</p>
+                    <p id="p2">少女峰，大运河游船，金色列车，西庸城堡</p>
+                    <p id="p3">全程升级热早+1晚五星级酒店</p>
+                    <div class="input-group" style="margin: 0 auto;">
+                        <span class="input-group-addon">
+                            <img src="img/position.png" alt="">
+                            <span>目的地</span>
+                        </span>
+                        <input type="text" class="form-control" placeholder=" |  日本  美国  英国  地中海" style="height: 45px;">
+                        <span class="input-group-addon" style="background-color:#cb5405; border-color:#cb5405;">
+                            <a href="#"><img src="img/search.png" ></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cen">
+
+        <div class="container" id="jiesong">
+            <div class="row">
+                <div class="col-xs-10 col-md-10">
+                    <img src="img/Sbanner2.jpg" alt="" class="img-responsive">
+                    <h3 style="margin-left: 500px;margin-top: -300px;color: white;">机场接送 省心省力</h3>
+                    <p style="margin-left: 500px;margin-top: -10px; font-size: 16px;color: white;">提供上海、苏州、无锡市</p>
+                    <p style="margin-left: 500px;font-size: 16px;color: white;">往返机场、码头接送服务，更有包车服务</p>
+                </div>
+                <div class="col-xs-2 col-md-2" style="background-color: #17336e;height:365px;margin-left: -30px;">
+                    <img src="img/car.png" alt="" style="margin-top: 85px;margin-left: 20px;">
+                    <h3 style="color: white;margin-left: 20px;">车辆接送</h3>
+                    <button type="button" class="btn btn-warning btn-lg" style="background-color: #17336e;border: 2px solid white;margin-left: 15px;margin-top: 20px;">
+                        查看详情
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="pcjiesong" class="container">
+            <div style="width:670px;margin:0 auto;">
+                <img src="img/carH.png" alt="" style="margin-top: 45px;">
+                <h3 style="margin-left: 120px;margin-top: -90px;color: #1c5080;">机场接送 省心省力</h3>
+                <p style="margin-left: 120px;font-size: 16px;">提供上海、苏州、无锡市</p>
+                <p style="margin-left: 120px;font-size: 16px;">往返机场、码头接送服务，更有包车服务</p>
+                <button type="button" class="btn" style="border: 1px solid #b5b5b5;background-color: white;margin-left: 450px;margin-top: -100px;">
+                    查看详情
+                </button>
+            </div>
+        </div>
+
+        <div class="container" id="remenluxian">
+            <div style="margin: 10px auto;width:220px;" id="luxian">
+                <h2> 热门路线</h2>
+                <p>Popular tourist routes</p>
+            </div>
+            <div id="luxian2">
+                <span style="color: red;">|</span>
+                <span>热门线路</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12" style="margin-left: 10px;">
+                    <img src="img/hot1.jpg" alt="" class="img-responsive" style="margin-top: 10px;width: 100%;">
+                    <div class="tupian">
+                        <span style="margin-left:20px;">海南三亚5天4晚，纯玩、4晚红树林度假王国</span>
+                        <br>
+                        <span style="font-size: 20px;margin-left:20px;">￥2500</span>
+                        <span>/人起</span>
+                    </div>
+                    <img src="img/hot2.jpg" alt="" class="img-responsive" style="margin-top: 10px;width: 100%;">
+                    <div class="tupian">
+                        <span style="margin-left:20px;">德法意瑞欧洲4国，ABCD任意路线由您挑选</span>
+                        <br>
+                        <span style="font-size: 20px;margin-left:20px;">￥7999</span>
+                        <span>/人起</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-0" style="margin-left: -20px;" id="lie2">
+                    <img src="img/hot3.jpg" alt="" class="img-responsive" style="margin-top: 10px;">
+                    <div class="tu1">
+                        <span style="margin-left:24px;">曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</span>
+                        <br>
+                        <span style="font-size: 20px;margin-left:20px;">￥2799</span>
+                        <span>/人起</span>
+                    </div>
+                    <img src="img/hot4.jpg" alt="" class="img-responsive" style="margin-top: -60px;">
+                    <div class="tu2">
+                        <span style="margin-left:24px;">日本本州游 樱花、寿司、温泉、美食</span>
+                        <br>
+                        <span style="font-size: 20px;margin-left:20px;">￥5399</span>
+                        <span>/人起</span>
+                    </div>
+                    <img src="img/hot5.jpg" alt="" class="img-responsive" style="margin-top: -60px;">
+                    <div class="tu3">
+                        <span style="margin-left:24px;">斯里兰卡7天6晚全景游 保证入住2晚香格里拉</span>
+                        <br>
+                        <span style="font-size: 20px;margin-left:20px;">￥7999</span>
+                        <span>/人起</span>
+                    </div>
+                </div>
+            </div>
+            <div id="more">
+                查看更多>
+            </div>
+        </div>
+
+        <div class="container" id="shiming">
+            <div style="margin: 10px auto;width:220px;text-align: center;" id="luxian">
+                <h2> 使命与愿景</h2>
+                <p>让旅游回归本质，体验纯粹旅游</p>
+            </div>
+            <div id="luxian2">
+                <span style="color: red;">|</span>
+                <span>使命与愿景:</span>
+                <span style="font-size: 20px;">让旅游回归本质，体验纯粹旅游</span>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-xs-5" style="padding: 0;">
+                    <img src="img/mission1.jpg" alt="">
+                </div>
+                <div id="linian1" class="col-md-7 col-xs-7" style="background-color: #17336e;height:350px;">
+                    <div style="width:470px;height:215px;margin: 85px auto;color:white;">
+                        <h3 style="margin-left: 150px;">服务理念及优势</h3>
+                        <p style="margin-top: 30px;line-height: 25px;">“英华逸游”通过重新打造旅游全程中的产品线路设计、 出行交通方案、陪游向导服务、增值关怀项目等，为客户 提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国 家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container row" id="linian2">
+                <div class="col-xs-12">
+                    <h3 style="text-align: center;">--服务理念--</h3>
+                    <p>“英华逸游”通过重新打造旅游全程中的产品线路设计、 出行交通方案、陪游向导服务、增值关怀项目等，为客户 提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国 家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+                    </p>
+                </div>
+            </div>
+            <div class="container" style="padding-left: 0;">
+                <img src="img/mission2.jpg" alt="" class="img-responsive">
+            </div>
+            <div id="youshi1" style="background-color:#17336e;height: 400px; margin-top: 5px;color: white;line-height: 25px;">
+                <div class="row" style="width:945px;margin:0 auto;">
+                    <div class="col-md-4 col-xs-4" style=" height: 400px;text-align: center;">
+                        <div id="pin">
+                            <img src="img/icon1.png" alt="" style="margin-top: 50px;">
+                            <h4>品质行程</h4>
+                        </div>
+                        <p>旅游达人精心设计、基于口碑反复打磨， 全网最好，敢跟任何产品比
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="height: 400px;text-align: center;">
+                        <div id="pin">
+                            <img src="img/icon2.png" alt="" style="margin-top: 50px;">
+                            <h4>品质</h4>
+                        </div>
+                        <p>不推自费，<br> 不进垃圾购物店和伪景点
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style=" height: 400px;text-align: center;">
+                        <div id="pin">
+                            <img src="img/icon3.png" alt="" style="margin-top: 50px;">
+                            <h4>品质小团</h4>
+                        </div>
+                        <p>独立成团不散拼，<br> 只跟亲朋好友一起玩，每天发团 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="youshi2">
+                <div class="col-xm-12">
+                    <h3 style="text-align: center;">--服务优势--</h3>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #939191">
+                    <div class="col-md-3 col-xs-3 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <div class="youshi2">
+                            <img src="img/icon11.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-xs-7 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <p style="margin-top: 40px;line-height:25px;">旅游达人精心设计、基于口碑反复打磨，<br> 告别人山人海鸡肋景点。
+                            <br> 全网最好，敢跟任何产品比
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #939191">
+                    <div class="col-md-3 col-xs-3 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <div class="youshi2">
+                            <img src="img/icon22.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-xs-7 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <p style="margin-top: 60px;line-height:25px;">不推自费，<br> 不进垃圾购物店和伪景点
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #939191">
+                    <div class="col-md-3 col-xs-3 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <div class="youshi2">
+                            <img src="img/icon33.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-xs-7 col-md-push-1 col-xs-push-1" style="height: 190px;">
+                        <p style="margin-top: 60px;line-height:25px;">独立成团不散拼，<br> 只跟亲朋好友一起玩，每天发团 </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: black;color: white;">
+        <div class="container" style="height:370px;" id="dibu1">
+            <div class="row" style="margin-top: 50px;text-align: center;">
+                <div class="col-md-1 col-xs-1">
+                    <p>合作伙伴</p>
+                </div>
+                <div class="col-md-1 col-xs-1" style="margin-right: 10px;"><img src="img/xiecheng.png">
+                    <p>携程网</p>
+                </div>
+                <div class="col-md-1 col-xs-1" style="margin-left: 10px;"><img src="img/feizhu.png" alt="">
+                    <p style="font-size: 12px;">阿里飞猪</p>
+                </div>
+                <div class="col-md-1 col-xs-1" style="margin-left: 25px;"><img src="img/quna.png" alt="">
+                    <p style="font-size: 12px;">去哪儿</p>
+                </div>
+                <div class="col-md-1 col-xs-1" style="margin-left: 25px;"><img src="img/suzhou.png" alt="">
+                    <p style="font-size: 12px;">苏州旅游局</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;text-align: center;">
+                <div class="col-md-1 col-xs-1">
+                    <p>热门位置</p>
+                </div>
+                <div class="col-md-11 col-xs-11" style="flex-wrap:wrap;display: flex;line-height: 25px;">
+                    <div style="margin-right: 10px;">韩国</div>
+                    <div style="margin-right: 10px;">日本</div>
+                    <div style="margin-right: 10px;">菲律宾</div>
+                    <div style="margin-right: 10px;">越南</div>
+                    <div style="margin-right: 10px;">老挝</div>
+                    <div style="margin-right: 10px;">柬埔寨</div>
+                    <div style="margin-right: 10px;">泰国</div>
+                    <div style="margin-right: 10px;">马来西亚</div>
+                    <div style="margin-right: 10px;">新加坡</div>
+                    <div style="margin-right: 10px;">印度</div>
+                    <div style="margin-right: 10px;">斯里兰卡</div>
+                    <div style="margin-right: 10px;">土耳其</div>
+                    <div style="margin-right: 10px;">阿联酋</div>
+                    <div style="margin-right: 10px;">西班牙</div>
+                    <div style="margin-right: 10px;">意大利</div>
+                    <div style="margin-right: 10px;">希腊</div>
+                    <div style="margin-right: 10px;">法国</div>
+                    <div style="margin-right: 10px;">比利时</div>
+                    <div style="margin-right: 10px;">荷兰</div>
+                    <div style="margin-right: 10px;">瑞士</div>
+                    <div style="margin-right: 10px;">奥地利</div>
+                    <div style="margin-right: 10px;">德国</div>
+                    <div style="margin-right: 10px;">匈牙利</div>
+                    <div style="margin-right: 10px;">俄罗斯</div>
+                    <div style="margin-right: 10px;">捷克</div>
+                    <div style="margin-right: 10px;">芬兰</div>
+                    <div style="margin-right: 10px;">葡萄牙</div>
+                    <div style="margin-right: 10px;">冰岛</div>
+                    <div style="margin-right: 10px;">美国</div>
+                    <div style="margin-right: 10px;">加拿大</div>
+                    <div style="margin-right: 10px;">巴西</div>
+                    <div style="margin-right: 10px;">阿根廷</div>
+                    <div style="margin-right: 10px;">澳大利亚</div>
+                    <div style="margin-right: 10px;">新西兰</div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;text-align: center;">
+                <div class="col-md-1 col-xs-1">
+                    <p>主要服务</p>
+                </div>
+                <div class="col-md-11 col-xs-11" style="flex-wrap:wrap;display: flex;line-height: 25px;">
+                    <div style="margin-right: 10px;">海岛度假</div>
+                    <div style="margin-right: 10px;">历史文化</div>
+                    <div style="margin-right: 10px;">探索冒险</div>
+                    <div style="margin-right: 10px;">美食购物</div>
+                    <div style="margin-right: 10px;">都市生活</div>
+                    <div style="margin-right: 10px;">海外游学</div>
+                    <div style="margin-right: 10px;">邮轮度假</div>
+                    <div style="margin-right: 10px;">蜜月摄影</div>
+                    <div style="margin-right: 10px;">亲子乐园</div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;text-align: center;">
+                <div class="col-md-1 col-xs-1">
+                    <p>友情链接</p>
+                </div>
+                <div class="col-md-11 col-xs-11" style="flex-wrap:wrap;display: flex;line-height: 25px;">
+                    <div style="margin-right: 10px;">马蜂窝</div>
+                    <div style="margin-right: 10px;">穷游</div>
+                    <div style="margin-right: 10px;">booking</div>
+                    <div style="margin-right: 10px;">苏州旅游局</div>
+                    <div style="margin-right: 10px;">驴友网</div>
+                    <div style="margin-right: 10px;">吾爱全球旅游中心</div>
+                    <div style="margin-right: 10px;">酒店团购</div>
+                    <div style="margin-right: 10px;">携程旅游攻略</div>
+                    <div style="margin-right: 10px;">天巡职航在线</div>
+                    <div style="margin-right: 10px;">满天飞旅游网</div>
+                    <div style="margin-right: 10px;">中国旅游网</div>
+                    <div style="margin-right: 10px;">澳乐网</div>
+                    <div style="margin-right: 10px;">背包兔旅游行程</div>
+                    <div style="margin-right: 10px;">出境旅游</div>
+                    <div style="margin-right: 10px;">国际酒店 </div>
+                    <div style="margin-right: 10px;">广州旅行社</div>
+                    <div style="margin-right: 10px;">出境旅游</div>
+                    <div style="margin-right: 10px;">517旅行</div>
+                    <div style="margin-right: 10px;">花生游</div>
+                    <div style="margin-right: 10px;">家园网</div>
+                    <div style="margin-right: 10px;">海外婚礼</div>
+                </div>
+            </div>
+        </div>
+        <hr style="color: #939191;">
+        <div class="container" id="dibu2">
+            <div class="row" style="margin: 10px auto; padding-bottom: 40px;text-align: center;">
+                <div class="col-md-3 col-md-push-3">
+                    <p>苏ICP备14019690号、2014-2017</p>
+                </div>
+                <div class="col-md-3  col-md-push-3 ">
+                    <p>@苏州英华国际旅游有限公司 版权所有</p>
+                </div>
+                <div class="col-md-3  col-md-push-3 " id="lian">
+                    <p>技术支持 苏杭联诚科技</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
